@@ -1,0 +1,53 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grow with Frondmere | Frondmere — Prosper Technologies</title><link rel="stylesheet" href="style.css"><meta name="description" content="Frondmere theme documentation and merchant support from Prosper Technologies."></head><body><a class="skip" href="#main">Skip to content</a><header><nav><a href="index.html">Frondmere documentation</a><a href="support.html">Contact support</a></nav></header><main id="main"><h1>Grow with Frondmere</h1><p class="notice">Development documentation for a Shopify theme for independent plant nurseries. This is not a retail plant store.</p><pre>FRONDMERE — MERCHANT SETUP GUIDE (development draft)
+Prosper Technologies | Version 0.1.0 | November 7, 2026
+
+This is a Shopify theme for merchants. The illustrative nursery is a theme demonstration, not a retail business. This development build is not Theme Store approved and is not submission ready.
+
+INSTALL AND CUSTOMIZE
+Upload the theme-only ZIP under Online Store &gt; Themes &gt; Import theme. Preview before publishing. Choose headings/body fonts, colors and favicon in Visual identity. Set the header logo and main menu; nested menus support three levels. Configure footer links and your own policies. Shopify supplies newsletter/contact submission processing; a theme does not provide an email marketing service.
+
+HOME PAGE
+Botanical Hero: heading, introductory copy, image, caption and collection link.
+Plant Finder: plant collection and native filter values. Requires the Shopify filters described below. Never publish preferences that your catalog cannot filter accurately.
+Featured Plants: selected collection and product count.
+Nursery Journal: photograph, original nursery story, link to a care article or about page.
+Nursery Notice: add blocks for pickup, hours, shipping regions or seasonal policies. These are information blocks, not fulfillment rules. Enforcement belongs in Shopify shipping/pickup configuration or an appropriate service.
+Replace all onboarding copy and placeholders with authentic licensed content before using a demo for submission. Demo images are separate assets and do not transfer as merchant product images on theme installation.
+
+PLANT DATA
+Create product metafield definitions under Settings &gt; Custom data &gt; Products. Namespace is frondmere. Use the exact keys below. Enable storefront access where available. Values belong to the merchant and must be checked against the actual species/cultivar and growing conditions.
+
+botanical_name     Single line text: verified botanical identity.
+light              Single line text: consistent controlled values, e.g. Bright indirect light.
+difficulty         Single line text: merchant-assessed care category, e.g. Easy.
+size               Single line text: current sale size category, e.g. Small.
+watering           Multi-line text: condition-based guidance, not an invented fixed schedule.
+humidity           Multi-line text: plant-specific humidity guidance.
+mature_size        Multi-line text: eventual size, with units and growing context.
+pet_safety         Single line text: explicitly reviewed label with species scope.
+safety_source      Multi-line text: source title/URL, exact species/cultivar and reviewer.
+safety_reviewed_on Date: last review date.
+pots               List of product references: merchant-curated compatible pots.
+pot_guidance       Multi-line text: opening diameter, nursery-pot clearance, drainage and variant limits.
+
+Blank care values are omitted. Do not fill an unknown value with a reassuring default. An unset pet-safety value is not evidence that a plant is non-toxic. Avoid broad safe-for-pets promises: identify the animal species and distinguish toxicity information from ingestion suitability. Theme software cannot verify botanical identity or veterinary facts.
+
+FINDER AND FILTERS
+Configure storefront filters for light, difficulty, size and pet_safety in Shopify Search &amp; Discovery. The theme uses native filter.p.m.frondmere.KEY parameters. Create the definitions first and use consistent product values. The finder reads available values directly from the configured native filters. Missing filters are hidden; with none configured, the section offers a normal browse link rather than an inaccurate matching form. Translate values using supported Shopify mechanisms. Verify every preference returns the correct subset, including no-result and unknown-data cases. Shopify imposes collection/filter limits; check current limits before enabling a large catalog. A theme cannot bypass native filtering restrictions. Sorting and ordinary collection filters use native URLs and standard GET forms.
+
+PRODUCTS AND POTS
+Configure product options and real variant inventory in Shopify. Product options navigate through Shopify option-value URLs; the page refreshes and Shopify determines the selected variant. The code does not embed the full variant array. High-variant and impossible-combination coverage still requires testing.
+Curate pots with opening measurements and variant-specific checks. Recommendations are separate products, not an inventory-linked bundle. This build does not automatically select a pot variant, guarantee compatibility, discount a bundle, or combine inventory.
+
+PICKUP AND SHIPPING
+Enable native pickup at the correct locations and assign inventory by location. Pickup text reflects Shopify availability. Seasonal shipping copy is guidance; it does not block checkout. Configure shipping profiles and checkout delivery rules in Shopify. Advanced weather holds, appointments and zone restrictions can require services/apps. Subscription plans require a selling-plan provider. Payment buttons require Shopify payment configuration.
+
+ACCESSIBILITY AND PERFORMANCE
+Use descriptive image alt text for informative images and readable link labels. Keep text contrast adequate after changing colors. Check your actual fonts, mobile navigation, filters, product forms and cart with keyboard and screen readers. Do not embed essential text/buttons in images. Upload appropriately sized images. Keep essential homepage sections populated during performance checks. A clean source check does not certify accessibility or performance.
+
+SUPPORT AND UPDATES
+Public Frondmere documentation and a dedicated support form are not deployed yet. The theme-info URLs are development placeholders and must be replaced before distribution. Support will be provided by Prosper Technologies; a complete support policy and working acknowledgment/attachment workflow must be validated before launch. Duplicate your theme before applying custom code or updates. Preserve merchant settings and retest app integrations after an update.
+
+KNOWN GAPS
+Consult qa/TEST-MATRIX.csv and qa/STATUS.txt. Only explicitly recorded tests are passes. Demo catalog coverage, native metafield/filter setup, real care-source review, pickup, subscriptions, high variants, gift delivery, all required browsers, screen readers, performance benchmarks, support and final submission materials remain incomplete.
+</pre></main><footer><small>© 2026 Prosper Technologies. Frondmere is in development and has not been approved by Shopify.</small></footer></body></html>

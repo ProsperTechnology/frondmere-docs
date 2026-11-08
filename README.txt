@@ -1,0 +1,1 @@
+Frondmere merchant documentation by Prosper Technologies. Contains documentation and support pages only. Theme runtime is kept separate. Support delivery and autoresponse require verification; no test messages sent by the assistant.
